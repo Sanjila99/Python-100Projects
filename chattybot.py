@@ -1,5 +1,6 @@
-
+import time
 import random
+start_time=time.time()
 def intro(bot_name,creator,birthdate):
     print("Hello! I am "+ bot_name + '.')
     print(f"My boss {creator} created me in year {birthdate}.")
@@ -134,6 +135,7 @@ username()
 guess_num()
 test()
 end()
-
+end_time=time.time()
+print(f"Hola! We talked for {end_time-start_time:.3f} seconds")
  
     
