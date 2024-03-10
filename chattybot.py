@@ -1,10 +1,9 @@
 import time
 import random
 start_time=time.time()
-def intro(bot_name,creator,birthdate):
+def botname(bot_name):
     print("Hello! I am "+ bot_name + '.')
-    print(f"My boss {creator} created me in year {birthdate}.")
-
+    
 def username():
     global user_name
     print("What is your name you beautiful human?")
@@ -20,7 +19,7 @@ def guess_num():
     tries=0
     while True:
         guess=random.randint(lower_bound,upper_bound)
-        user_guess=input(f"Is {guess} the number u are thinking?").lower()
+        user_guess=input(f"Is {guess} the number you are thinking of? (Type 'yes', 'higher', or 'lower'):").lower()
         if user_guess=='yes':
             print("Great! I guessed it in ",tries,"tries.")
             break
@@ -118,7 +117,7 @@ WMMm__,-'.'     /      _.\      F'''-+,,   ;_,_.dMMMMMMMM[,_ / `=_}
     print(animal3)
     while True: 
         guess_animal3 = input("Tell me the name of this animal: ").lower()
-        if guess_animal3 == 'bambi':
+        if guess_animal3 == 'deer':
             print("You are an intelligent person.")
             break
         else:
@@ -126,16 +125,28 @@ WMMm__,-'.'     /      _.\      F'''-+,,   ;_,_.dMMMMMMMM[,_ / `=_}
 def end():
     print(f"It was nice spending time with you {user_name}.")
 
+def creator():
+    print("Do u wanna know the God who created me?")
+    boss=input().lower()
+    if boss=="yes":
+        print("My Boss is 'Sanjila' the greatest!!")
+    elif boss=="no":
+        print("Oops! You unlucky one u couldnot know the greatest divine person!")
+    else:
+        print("answer me yes or no !!bro")
+          
 
 
 
 
-intro('Sanji','Sanjila',2024)
+
+botname('Sanji')
 username()
 guess_num()
 test()
 end()
 end_time=time.time()
 print(f"Hola! We talked for {end_time-start_time:.3f} seconds")
+creator()
  
     
